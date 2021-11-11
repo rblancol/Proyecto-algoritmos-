@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel= "stylesheet" href="img.css";>
+</head>
+<body>
+    <h1>Bienvenido al cajero</h1>
+    <br>
+    <h2>Su saldo es:</h2>
+    <label for="">Quetzales: </label>
+    <input type="text" name="Cantidad1" id="C1" value="8000">
+    <label for="">Dolares: </label>
+    <input type="text" name="Cantidad2" id="C2" value="1000">
+    <form action="">
+        <h2>Retiros</h2>
+        <input type="text" name="" id="Cant" placeholder="Cantidad">
+        <hr>
+        <input type="button" value="Retirar en Quetzales" id="bt2" onclick="formula()">   
+        <input type="button" value="Retirar en Dolares" id="bt3" onclick="formula2()">
+    </form>
+    <script>
+        function formula() {
+            var CantidadT=parseInt(document.getElementById('Cant').value);
+            var Cantidad1=parseInt(document.getElementById('C1').value);
+            var Cantidad2=parseInt(document.getElementById('C2').value);
+            document.getElementById('C1').value=(Cantidad1-CantidadT);
+            
+            if (Cantidad1<0) {
+             var canti=(0);
+             alert("Su saldo en Q es: "+" "+canti);
+            } if (Cantidad1<0) {
+             alert("Gracias por su preferencia");
+            }
+            else {
+            }
+        }
+        
+        function formula2() {
+            var CantidadT=parseInt(document.getElementById("Cant").value);
+            var Cantidad1=parseInt(document.getElementById("C1").value);
+            var Cantidad2=parseInt(document.getElementById("C2").value);
+            document.getElementById("C2").value=(Cantidad2-CantidadT);
+        
+            if (Cantidad2<0) {
+              var canti2=(0);
+              alert("Su saldo en $ es: "+" "+canti2);
+            } if (Cantidad2<0) {
+             alert("Gracias por su preferencia");}
+            else {
+            }
+        }   
+    </script>
+</body>
+</html>
